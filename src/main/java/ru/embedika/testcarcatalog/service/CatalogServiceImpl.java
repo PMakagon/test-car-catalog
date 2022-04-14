@@ -25,6 +25,8 @@ public class CatalogServiceImpl implements CatalogService {
 
     @Override
     public Car getByStateNumber(String stateNumber) {
+        Car newcar=catalogRepository.findFirstByStateNumber(stateNumber);
+
         return catalogRepository.findFirstByStateNumber(stateNumber);
     }
     @Override

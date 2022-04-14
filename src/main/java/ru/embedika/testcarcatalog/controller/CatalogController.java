@@ -27,17 +27,17 @@ public class CatalogController {
     }
 
     @GetMapping("{stateNumber}")
-    public ResponseEntity<Car> getByStateNumber(@RequestParam @PathVariable String stateNumber) {
+    public ResponseEntity<Car> getByStateNumber(@PathVariable String stateNumber) {
         return ResponseEntity.ok().body(catalogService.getByStateNumber(stateNumber));
     }
 
     @GetMapping("/all/color/{color}")
-    public Collection<Car> getAllByColor(@RequestParam @PathVariable String color) {
+    public Collection<Car> getAllByColor(@PathVariable String color) {
         return catalogService.getAllByColor(color);
     }
 
     @GetMapping("/all/model/{model}")
-    public Collection<Car> getAllByModel(@RequestParam @PathVariable String model) {
+    public Collection<Car> getAllByModel(@PathVariable String model) {
         return catalogService.getAllByModel(model);
     }
 
